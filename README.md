@@ -9,5 +9,4 @@ For ActBlue filings, ProPublica provides state-specific CSV downloads (see [exam
   * convert date columns to ISO dates on import
   * better error-handling for command line
   * maybe extract city as a lookup?
-
-  
+  * extract recipient name from memo_text field and add a separate column & make that a lookup column
