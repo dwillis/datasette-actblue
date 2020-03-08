@@ -9,6 +9,7 @@ verify_ssl = true
 datasette = "*"
 wget = "*"
 click = "*"
+csvs-to-sqlite = "*"
 
 [requires]
 python_version = "3.7"
