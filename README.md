@@ -1,7 +1,6 @@
 ## datasette-actblue
 
-For ActBlue filings, ProPublica provides state-specific CSV downloads (see [example](https://projects.propublica.org/itemizer/committee/C00401224/2020/filings/1385527/downloads)). Given a specific filing and state, grab those CSV files and load them into a SQLite database, then browse them with Datasette.
-
+For ActBlue filings, ProPublica provides state-specific CSV downloads (see [example](https://projects.propublica.org/itemizer/committee/C00401224/2020/filings/1385527/downloads)). Given a specific filing and state, this script grabs those CSV files and loads them into a SQLite database, then makes them available to browse with [Datasette](https://github.com/simonw/datasette). CSV loading is done using [csvs-to-sqlite](https://github.com/simonw/csvs-to-sqlite), both made by Simon Willison.
 
 ### Usage
 
