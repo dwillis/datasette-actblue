@@ -1,6 +1,8 @@
 import wget
 import click
 import subprocess
+import os
+import glob
 
 @click.command()
 @click.argument("filing")
@@ -11,7 +13,10 @@ def actblue(filing, state):
     spending_url = "https://pp-projects-static.s3.amazonaws.com/itemizer/sb_%s_%s.csv" % (filing, state.lower())
     spending = wget.download(spending_url, bar=wget.bar_thermometer)
     subprocess.call(["csvs-to-sqlite", receipts, spending, "actblue.db"])
-    subprocess.call(["datasette actblue.db"])
+    subprocess.call(["datasette", "actblue.db"])
 
 if __name__ == '__main__':
+    files = glob.glob("*.csv")
+    for file in files:
+        os.remove(file)
     actblue()
